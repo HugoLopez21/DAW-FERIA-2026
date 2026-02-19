@@ -1,0 +1,21 @@
+body {
+    background-color: $color-canvas;
+    color: $color-ink;
+    font-family: $font-body;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+// CLASE UTILITARIA: CONTAINER
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.text-highlight {
+    color: $color-ink;
+    font-weight: 400;
+}

@@ -1,0 +1,126 @@
+// scss/layout/_masonry.scss
+
+
+
+.work-section {
+    padding: 6rem 0 8rem 0;
+    background-color: $color-canvas;
+
+}
+
+.section-header {
+    margin-bottom: 4rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid $color-ink;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    h2 {
+        font-family: $font-display;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1;
+        text-transform: uppercase;
+        color: $color-ink;
+        letter-spacing: -1px;
+    }
+
+    .subtitle {
+        font-family: $font-display;
+        font-weight: 700;
+        font-size: 1rem;
+        color: $color-ink;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+    }
+
+    // Ajuste móvil para la cabecera
+    @media (max-width: 600px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+}
+
+// === LA GRILLA MÁGICA ===
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    grid-auto-rows: 10px; // UNIDAD BASE PARA EL JS 
+    align-items: start;
+}
+
+// === LAS TARJETAS (ITEMS) ===
+.project-card {
+    background-color: $color-white;
+    border: 2px solid $color-ink;
+    border-radius: 0;
+    box-shadow: $shadow-std;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+
+
+    &:hover {
+        transform: translate(3px, 3px);
+        box-shadow: $shadow-hover;
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: cover;
+
+
+    }
+
+    &:hover &__image {
+        filter: grayscale(0%);
+    }
+
+    // Información debajo de la imagen
+    &__info {
+        padding: 1.25rem;
+        border-top: 2px solid $color-ink;
+        background-color: $color-white;
+
+        h3 {
+            font-family: $font-display;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 0.25rem;
+            color: $color-ink;
+            line-height: 1.2;
+        }
+
+        p {
+            font-family: $font-body;
+            font-size: 0.85rem;
+            color: rgba($color-ink, 0.7);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+    }
+}
+
+// RESPONSIVE
+@media (max-width: 900px) {
+    .masonry-grid {
+        grid-template-columns: repeat(2, 1fr); // 2 columnas en tablets
+    }
+}
+
+@media (max-width: 600px) {
+    .masonry-grid {
+        display: block; // En móvil quitamos el grid complejo
+    }
+
+    .project-card {
+        margin-bottom: 2rem;
+    }
+}

@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Café del Mundo</title>
+
+  <!-- Tipografías -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/estilos.css" />
+</head>
+<body>
+  <header class="site-header" id="home">
+    <nav class="navbar" aria-label="Navegación principal">
+      <a class="brand" href="#hero">
+        <img src="media/logo.png" alt="Café del Mundo" class="brand-logo" />
+        <span class="brand-name">Café del Mundo</span>
+      </a>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="Abrir menú">
+        <span class="menu-bar"></span><span class="menu-bar"></span><span class="menu-bar"></span>
+      </button>
+
+      <ul class="nav-links" id="primary-menu">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Coffees</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+    <div class="cart-icon">
+        <a href="#cart" id="cart-btn">
+            <img src="media/carrito.png"/>
+            <span id="cart-count" class="cart-badge">0</span>
+        </a>
+    </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="hero-content container">
+        <h1 class="hero-title">Descubre la magia del café</h1>
+        <p class="hero-subtitle">Sabores exquisitos y aromas envolventes. Granos seleccionados con mimo.</p>
+        <div class="hero-actions">
+          <a href="#products" class="btn btn-primary">Comprar ahora</a>
+          <a href="#about" class="btn btn-ghost">Conócenos</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Buscador-->
+    <section class="search container" aria-labelledby="search-title">
+        <div class="search-bar">
+         <h2 id="search-title" class="section-title">Encuentra tu café</h2>
+            <div class="search-controls">
+            <div class="-ic-icon">
+                <input type="text" id="search-input" placeholder="Buscar por nombre o descripción…"  autocomplete="off" />
+            </div>
+            <select id="search-options" aria-label="Ordenar resultados">
+                <option value="relevance">Ordenar: Relevancia</option>
+                <option value="priceAsc">Precio: menor a mayor</option>
+                <option value="priceDesc">Precio: mayor a menor</option>
+                <option value="nameAsc">Nombre A–Z</option>
+                <option value="nameDesc">Nombre Z–A</option>
+            </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section class="products-section" id="products" aria-labelledby="products-title">
+    <div class="container">
+        <div class="carousel-header">
+            <h2 id="products-title" class="section-title">Nuestros cafés</h2>
+        </div>
+
+        <!-- Carrusel: el track mantiene id=product-grid para que el buscador/ordenar sigan funcionando -->
+        <div class="product-carousel" role="region" aria-roledescription="carrusel" aria-label="Nuestros cafés">
+        <div class="product-track" id="product-grid">
+            <!-- 1 -->
+            <article class="product-card" data-name="Espresso" data-price="2.99">
+            <figure class="product-media">
+                <img src="media/espresso.jpg" alt="Espresso" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Espresso</h3>
+                <p class="product-desc">Intenso y aromático, un impulso de energía en cada sorbo.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">2.99€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="product-card" data-name="Latte" data-price="3.99">
+            <figure class="product-media">
+                <img src="media/latte.jpg" alt="Latte" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Latte</h3>
+                <p class="product-desc">Suave y cremoso, espresso con leche vaporizada y espuma.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">3.99€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="product-card" data-name="Cappuccino" data-price="3.49">
+            <figure class="product-media">
+                <img src="media/capuccino.jpg" alt="Cappuccino" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Cappuccino</h3>
+                <p class="product-desc">Equilibrio perfecto: espresso, leche vaporizada y espuma.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">3.49€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="product-card" data-name="Macchiato" data-price="3.20">
+            <figure class="product-media">
+                <img src="media/machiatto.avif" alt="Macchiato" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Macchiato</h3>
+                <p class="product-desc">Espresso marcado con una nube de leche. Intenso y cremoso.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">3.20€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+
+            <!-- 5-->
+            <article class="product-card" data-name="Italiano" data-price="2.80">
+            <figure class="product-media">
+                <img src="media/italiano.png" alt="Café Italiano" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Italiano</h3>
+                <p class="product-desc">Perfil clásico, cuerpo medio y final tostado. Muy equilibrado.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">2.80€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+
+            <!-- 6-->
+            <article class="product-card" data-name="Frappé" data-price="3.70">
+            <figure class="product-media">
+                <img src="media/frappe.jpg" alt="Frappé" />
+            </figure>
+            <div class="product-body">
+                <h3 class="product-title">Frappé</h3>
+                <p class="product-desc">Café batido con hielo. Refrescante, suave y muy cremoso.</p>
+            </div>
+            <div class="product-foot">
+                <span class="price">3.70€</span>
+                <button class="add-to-cart" type="button">Añadir</button>
+            </div>
+            </article>
+        </div>
+        <div class="carousel-actions">
+            <button class="carousel-btn prev" aria-label="Ver cafés anteriores">‹</button>
+            <button class="carousel-btn next" aria-label="Ver más cafés">›</button>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+        <p>Sin resultados. Prueba con “espresso”, “cremoso” o “clásico”.</p>
+        </div>
+    </div>
+</section>
+
+
+    <!-- About + Carrusel -->
+    <section class="about-section" id="about" aria-labelledby="about-title">
+      <div class="about-container container">
+        <div class="about-carousel" role="region" aria-label="Galería de imágenes">
+          <img src="media/cafeteria.jpeg" alt="Paquetes de café de especialidad" />
+          <img src="media/americano.jpg" alt="Café americano recién servido" />
+          <img src="media/degustacion.jpg" alt="Mesa de cata con varias tazas" />
+        </div>
+
+        <div class="about-text">
+          <h2 id="about-title" class="section-title">Sobre Nosotros</h2>
+          <p>Seleccionamos cafés de origen ético y los tostamos con precisión para resaltar su carácter.</p>
+          <p>Del grano a la taza, cuidamos cada detalle para que disfrutes una experiencia extraordinaria.</p>
+          <a href="#contact" class="btn btn-secondary">Saber más</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Carrito -->
+    <section class="cart-section" id="cart" aria-labelledby="cart-title">
+      <div class="container">
+        <h2 id="cart-title" class="section-title">Tu carrito</h2>
+        <div id="cart-items" class="cart-items"></div>
+        <div class="cart-summary">
+          <p id="cart-total">Total: €0.00</p>
+          <button class="btn btn-primary"  id="checkout-open" type="button">Finalizar compra</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Panel lateral de checkout -->
+        <div class="checkout-overlay" id="checkout-overlay"></div>
+
+        <aside class="checkout-panel" id="checkout-panel" aria-hidden="true">
+        <div class="checkout-panel-header">
+            <h3 class="checkout-panel-title">Resumen de compra</h3>
+            <button class="checkout-close" id="checkout-close" aria-label="Cerrar panel">✕</button>
+        </div>
+
+        <div class="checkout-panel-body">
+            
+            <p id="checkout-count">0 artículos</p>
+            
+            <div id="checkout-items" class="checkout-items"></div>
+
+            <div class="checkout-summary">
+            <p id="checkout-total">Total: €0.00</p>
+            </div>
+        </div>
+
+        <div class="checkout-panel-footer">
+            <button class="btn btn-primary" type="button" id="checkout-pay">
+            Pagar
+            </button>
+        </div>
+        </aside>
+
+        <!-- Opiniones de clientes (carrusel automático) -->
+        <section class="testimonials-section" id="reviews" aria-labelledby="reviews-title">
+        <div class="container">
+            <h2 id="reviews-title" class="section-title">Opiniones de nuestros clientes</h2>
+            <p class="testimonials-lead">
+            Lo que dicen quienes ya disfrutan de Café del Mundo cada mañana.
+            </p>
+
+            <!-- Viewport del carrusel -->
+            <div class="testimonials-viewport">
+            <!-- Cada tarjeta es una “diapositiva” -->
+            <article class="testimonial-card is-active">
+                <div class="testimonial-header">
+                <div class="avatar-circle">M</div>
+                <div>
+                    <h3 class="testimonial-name">María G.</h3>
+                    <p class="testimonial-meta">Cliente habitual</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “El mejor café que he comprado online. El aroma llena la casa y el envío fue rapidísimo.”
+                </p>
+                <p class="testimonial-stars">★★★★★</p>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-header">
+                <div class="avatar-circle">J</div>
+                <div>
+                    <h3 class="testimonial-name">Javier R.</h3>
+                    <p class="testimonial-meta">Amante del espresso</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “El espresso es intenso pero nada amargo. Se nota que el tueste está muy cuidado.”
+                </p>
+                <p class="testimonial-stars">★★★★★</p>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-header">
+                <div class="avatar-circle">L</div>
+                <div>
+                    <h3 class="testimonial-name">Laura S.</h3>
+                    <p class="testimonial-meta">Primera compra</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “Compré el pack de degustación para regalar y acabé quedándome uno para mí.”
+                </p>
+                <p class="testimonial-stars">★★★★☆</p>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-header">
+                <div class="avatar-circle">C</div>
+                <div>
+                    <h3 class="testimonial-name">Carlos T.</h3>
+                    <p class="testimonial-meta">Barista en casa</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “Por fin encuentro un café de especialidad con esta calidad sin salir de casa.”
+                </p>
+                <p class="testimonial-stars">★★★★★</p>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-header">
+                <div class="avatar-circle">A</div>
+                <div>
+                    <h3 class="testimonial-name">Ana P.</h3>
+                    <p class="testimonial-meta">Amante del latte</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “El latte tiene una cremosidad brutal. Ya no vuelvo al café del súper.”
+                </p>
+                <p class="testimonial-stars">★★★★★</p>
+            </article>
+
+            <article class="testimonial-card">
+                <div class="testimonial-header">
+                <div class="avatar-circle">D</div>
+                <div>
+                    <h3 class="testimonial-name">David M.</h3>
+                    <p class="testimonial-meta">Regalo perfecto</p>
+                </div>
+                </div>
+                <p class="testimonial-text">
+                “Lo compré como regalo y ahora toda mi familia está enganchada a Café del Mundo.”
+                </p>
+                <p class="testimonial-stars">★★★★☆</p>
+            </article>
+            </div>
+        </div>
+        </section>
+
+
+    <!-- Contacto mejorado -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title" class="section-title">Contacto</h2>
+        <p class="contact-lead">¿Dudas o sugerencias? ¡Escríbenos! Respondemos en 24–48h.</p>
+
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-grid">
+            <div class="form-field">
+              <label class="float-label">
+                <input id="name" name="name" type="text" placeholder=" " required minlength="2" />
+                <span>Nombre</span>
+              </label>
+              <small class="hint">Tu nombre real o apodo.</small>
+            </div>
+
+            <div class="form-field">
+              <label class="float-label">
+                <input id="email" name="email" type="email" placeholder=" " required />
+                <span>Correo electrónico</span>
+              </label>
+              <small class="hint">Ej. tucorreo@ejemplo.com</small>
+            </div>
+
+            <div class="form-field">
+              <label class="float-label">
+                <input id="phone" name="phone" type="tel" placeholder=" " pattern="^[0-9+\s()-]{7,}$" />
+                <span>Teléfono (opcional)</span>
+              </label>
+              <small class="hint">Acepta dígitos, +, guiones y espacios.</small>
+            </div>
+
+            <div class="form-field field-full">
+              <label class="float-label">
+                <textarea id="message" name="message" rows="6" placeholder=" " required minlength="10"></textarea>
+                <span>Mensaje</span>
+              </label>
+              <small class="hint">Cuéntanos qué necesitas (mín. 10 caracteres).</small>
+            </div>
+
+            <div class="form-field field-inline">
+              <label class="checkbox">
+                <input type="checkbox" id="consent" required />
+                <span>Acepto la <a href="#" class="link">política de privacidad</a>.</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Enviar</button>
+            <button type="reset" class="btn btn-ghost">Limpiar</button>
+          </div>
+        </form>
+                <!-- ubicación y mapa -->
+            <div class="contact-map-wrapper">
+            <div class="contact-map-card">
+                <h3 class="contact-map-title">Encuéntranos</h3>
+                <p class="contact-map-text">
+                Estamos en el corazón de la ciudad, listos para servirte tu café favorito.
+                </p>
+
+                <div class="contact-map-grid">
+                <div class="contact-map-info">
+                    <p><strong>Dirección</strong></p>
+                    <p>Calle Aroma 12, 28000 Madrid</p>
+                    <p class="contact-map-small">Lunes a viernes, 8:00 – 19:00h</p>
+                </div>
+
+                <div class="contact-map-embed">
+                    <iframe
+                    title="Mapa de ubicación Café del Mundo"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2991.999999!2d-3.7037902!3d40.4167754!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDI1JzAwLjQiTiAzwrA0MicxMy43Ilc!5e0!3m2!1ses!2ses!4v1700000000000"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    loading="lazy">
+                    </iframe>
+                </div>
+                </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-col">
+        <h3>Contacto</h3>
+        <p>Email: info@cafedelmundo.com</p>
+        <p>Teléfono: +34 600 000 000</p>
+      </div>
+      <div class="footer-col">
+        <h3>Enlaces</h3>
+        <ul class="footer-links">
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#products">Coffees</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h3>Newsletter</h3>
+        <form class="newsletter" action="#" method="post">
+          <input type="email" placeholder="Tu email" required />
+          <button type="submit" class="btn btn-primary">Suscribirme</button>
+        </form>
+        <div class="social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="X">X</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">2025 Café del Mundo</div>
+  </footer>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- JS -->
+   <script src="js/shopping-cart.js"></script>
+  <script src="js/about-carousel.js"></script>
+  
+</body>
+</html>
+
+

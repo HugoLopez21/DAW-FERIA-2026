@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ca">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Joc de Parelles</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="game.js" defer></script>
+    </head>
+    <body>
+        <h1>Joc de Parelles</h1>
+        <input
+            type="number"
+            id="board-size"
+            placeholder="Mida del tauler (2-8)"
+            min="2"
+            max="8"
+        />
+        <button id="start-game">Iniciar Joc</button>
+        <div id="game-board"></div>
+        <p>Parelles restants: <span id="remaining-pairs">0</span></p>
+    </body>
+</html>

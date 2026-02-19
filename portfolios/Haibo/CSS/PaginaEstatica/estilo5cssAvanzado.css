@@ -1,0 +1,457 @@
+:root{
+    --Fondo-principal-oscuro: #1b1a17;
+    --Degradado-intermedio: #3a332d;
+    --Texto-principal: #f9f7f3;
+    --Texto-secundario: #b7b0a4;
+    --Terracota-botones: #d47c59;
+    --Oliva-detalles: #8fb36a;
+    --color1 :#ABD483 ;
+    --color2 : #C77F65;
+    --borde : #6e6e6e;
+    --blur: saturate(140%) blur(8px) ;
+}
+
+/*Reset HTML*/
+
+html{
+    scroll-behavior: smooth;
+
+}
+*{ /*El asterisco es el general de toda la web*/
+    box-sizing: border-box;
+}
+
+
+body{
+    margin: 0;
+    color:var(--Texto-principal);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    /*Fondos con gradientes*/
+    background: radial-gradient(800px 400px at 20% -5% , var(--color1),   transparent 80%),
+                radial-gradient(800px 400px at right top, var(--color2),transparent 60%),
+                linear-gradient(180deg,var(--Fondo-principal-oscuro) 0%, var(--Fondo-principal-oscuro)100%);
+                /*Tamaño eliptico del gradiente: 1200px y 800px 
+                posicion del centro : 10% de ancho (pegado a la izquierda)
+                y -10% de alto (empezando por arriba a partir del 60% el 
+                radio se vuelve totalmente transparente
+                */
+    background-attachment: fixed;
+    
+
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    margin: block;
+}
+
+.container{
+    max-width: min(1150px , 92%);
+    margin: 0  auto;
+}
+
+.nav{
+    position: sticky;
+    top: 0;
+    z-index: 50 ;
+
+    background: linear-gradient(180deg,rgba(0, 0, 0, 0.25),rgba(0, 0, 0, 0.25));
+    border-bottom: 1px solid var(--border);
+
+    backdrop-filter: var(--blur); /*etiqueta para que se vea deifuminado a traves*/
+
+}
+
+.nav-inner{
+    display: flex;
+    align-items: center;
+    justify-content:space-between ;
+    padding: 16px 0px;
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-weight:700 ;
+    letter-spacing: 0.3px;
+}
+
+
+.brand-badge{
+    /*Cuadradito  de logo con gradiente circular */
+    width:34px ;
+    height:34px ;
+    border-radius:10px;
+    box-shadow: var(--Texto-secundario);
+    background: conic-gradient(from 180deg, var(--color2), var(--color1));
+}
+
+.link{
+    display: flex;
+    gap:10px;
+    align-items: center;
+
+}
+
+.link a{
+    padding: 10px 14px;
+    border-radius: 1000px;
+    color: var(--Texto-secundario);
+    font-weight: 600;
+}
+
+.link a:hover,
+.link a:focus{
+    color: var(--Texto-principal);
+    background: #84818156; ;
+    outline: none;
+
+}
+
+
+.cta{
+    color: #fff !important;
+    background: linear-gradient(135deg,var(--color1),var(--color2));
+}
+
+
+/*Hero partada*/
+
+.hero{
+    padding:100px 0 80px;
+}
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1.2fr 1fr;
+    /*Quiero dos columnas: lap rimera va ser mas ancga y la segunda mas estrecha*/
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+}   
+
+.glass{
+    background: linear-gradient(180deg, rgba(255,255,255,0.10),rgba(255,255,255,0.04));
+    border:1px solid var(--border);
+    border-radius: 15px;
+}
+
+.chip{
+    padding: 12px 14px;
+    display: inline-flex; /*crea un contenedor felxible, pero se comporta como si fuese texto*/
+    gap: 10px;   
+    align-items: center;
+    color: var(--Texto-secundario);
+}
+
+
+
+.headline{
+    font-size: clamp(32px,5vw , 56px);
+    /*clamp se utiliza para establecer un tamaño de fuente que se adapta automaticamente al ancho de pantalla 
+    y no se pasa de los limites clamp (valor_min, valor_preferido, valor_maximo)
+    32px , valor min
+    5vw vierport width = ancho de la ventana
+    5vw= 5% del ancho de la ventana el texto se ajusta y crece o disminuye segun el tamaño de la pantalla
+    56px, valor max*/
+    line-height: 1.05;
+    margin: 10px 0 12px;
+
+}
+
+
+
+.sub{
+    color:var(--Texto-secundario);
+    margin: 0 0 22px;
+}
+
+
+.hero-action{
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/*Botones base*/
+.btn{
+    padding: 0.9rem 1rem;
+    border: 0;
+    border-radius: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    color:var(--Texto-principal);
+}   
+
+.btn.primary{
+    background: linear-gradient(135deg, var(--color2),var(--color1));
+    color:#fff;
+}
+
+.btn.ghost{
+    background: transparent;
+    border: 1px solid white;
+}
+
+.hero-card{
+    padding: 20px;
+}
+
+.stats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:10px;
+
+}
+
+.stat{
+    padding: 14px;
+    border-radius: 14px;
+    text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+}
+
+.stat h4{
+    margin: 4px 0 0;
+    font-size: 14px;
+    color: var(--Texto-secundario);
+    font-weight: 600;
+}
+
+.stat b{
+    font-size: 20px;
+}
+
+.note{
+    margin-top: 14px;
+    color: var(--Texto-secundario);
+    font-size: 14px;
+}
+
+
+
+/*Seccion / tarjetas*/
+
+
+
+.section{
+    padding: 70px 0px;
+
+}
+
+.section h2{
+    font-size: clamp(26px, 3.4vw,36px);
+    margin: 0 0 10px;
+}
+
+.section .lead{
+    color : var(--muted);
+    margin: 0 0 25px;
+}
+
+.grid-3{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap : 18px ;
+
+}
+.card{
+    background: var(--Degradado-intermedio);
+    border: 1px solid var(--borde);
+    border-radius: 18px ;
+    padding: 18px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+}
+
+.card:hover{
+    transform: translateY(-4px); /*Porq sube para arriba*/
+    box-shadow: 0 16px 40px rgba(0,0,0,0.2 );
+    border-color: rgba(255,255,255, 0.2);
+
+}
+
+.card .icon{
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: grid;
+    margin-bottom: 10px;
+    color: #fff;
+    background: linear-gradient(135deg, var(--color1), var(--color2));
+    font-size: 22px;
+    place-items: center;
+
+
+}
+
+/*Seccion  portfolio */
+
+.portfolio-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+
+}
+
+.shot{
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    background: #0a0e1f;
+    box-shadow: var(--shadow);
+    background-size: cover;
+    background-position: center;
+    aspect-ratio: 16/10;
+
+}
+
+/*Capa gradiente para mejorar la legibilidad del pie de boto */
+
+.shot::after{
+    content: "";
+    position: absolute;
+    inset: 0; /*Cubre todo el contenedor*/
+    background: linear-gradient(180deg, rgba(0,0,0,0)40% ,rgba(0,0,0,0.65));
+    opacity: 0.25;
+    transition: opacitu 0.3s ease;
+
+}
+
+.shot:hover::after{
+    opacity: 0.6;
+}
+
+.shot .meta{
+    position: absolute;
+    left: 14px;
+    right: 14px;
+    bottom: 12px;
+    z-index: 2;
+    color: #fff;
+    
+}
+
+
+.carrusel-wrap{
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+}
+
+.track-snap{
+    display: flex; /*Colocar las tarjetas en las filas*/
+    gap: 16px;
+    padding: 8px;
+    overflow-x: auto;/*Activar scroll horizontal (drag/touch)*/
+    scroll-snap-type: x mandatory; /*Obliga a encajar la barra en el eje x */
+    scroll-padding: 8px; /*Acolchado en el encaje */
+} 
+
+/*Estaliza la barra de scroll*/
+
+.track-snap::-webkit-scrollbar{
+    height: 8px;
+}
+
+.track-snap::-webkit-scrollbar-thumb{
+    background: rgba(255,255,255,0.25);
+    border-radius: 8px;
+}
+
+.member{
+    flex: 0 0 85% ; /*Ocupa 85% del ancho del viewport*/
+    scroll-snap-align: center; /*Se ancla centrada al soltar el scroll*/
+    padding: 18px;
+    border-radius: 16px;
+    border: 1px solid var(--borde);
+    text-align: left;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+
+.avatar{
+    width: 80px;
+    height: 80px;
+    margin: 0;
+    border-radius: 15px;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    
+}
+
+.role{
+    color: var(--Texto-secundario);
+    margin: 6px 0 0;
+    font-size: 14px;
+}
+
+.hint{
+    color: var(--Texto-secundario);
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (min-width: 900px){
+    /*En pantalla , ocupe mas o menos un 40% para ver casi tres completas*/
+    .member{
+        flex-basis: 40%;
+    }
+}
+
+
+.form {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.form .full{
+    grid-column: 1/ -1;  /*Desde la primera hasta la ultima = ocupa todas las columnas*/
+}
+
+.form input,
+.form textarea{
+    width: 100%;
+    padding: 1rem 1rem ;
+    border-radius: 12px ;
+    border: 1px solid var(--color2) ;
+    background: var(--Degradado-intermedio);
+    color: var(--Texto-principal);
+}
+
+.form textarea{
+    min-height: 130px;
+}
+
+.form .submit{
+    justify-self: center; /*alineado a la izquierda*/
+}
+
+.btn.primary.submit {
+    padding: 15px 250px; 
+    border-radius: 16px; /* Bordes más redondeados */
+}
+.impro{
+    text-align: left;
+    margin: 20px 0;
+
+}
+
+.footer {
+    text-align: left;
+    color: var(--Texto-secundario);
+    padding: 40px 0;
+}

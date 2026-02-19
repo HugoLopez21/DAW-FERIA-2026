@@ -1,0 +1,87 @@
+// scss/layout/_about.scss
+
+.about-section {
+    padding: 6rem 0;
+    border-bottom: 2px solid $color-ink;
+}
+
+.about__content {
+    display: grid;
+    // Dos columnas: La bio ocupa un poco más (1.5 partes) que el stack (1 parte)
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem; 
+    align-items: start;
+}
+
+// === COLUMNA IZQUIERDA: BIO ===
+.about__bio {
+    .section-title {
+        font-family: $font-display; 
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+        text-transform: uppercase;
+        letter-spacing: -1px;
+        color: $color-ink;
+    }
+
+    p {
+        font-family: $font-body; 
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        color: rgba($color-ink, 0.9);
+        max-width: 600px; 
+    }
+
+    strong {
+        font-weight: 700; 
+    }
+}
+
+// === COLUMNA DERECHA: STACK (Los Bloques) ===
+.stack-grid {
+    display: flex;
+    flex-wrap: wrap; // Si no caben, bajan a la siguiente fila
+    gap: 1rem; 
+    list-style: none;
+}
+
+.stack-item {
+    font-family: $font-display;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+
+    // FÍSICA DEL BLOQUE
+    background-color: $color-canvas; 
+    color: $color-ink;
+    border: 2px solid $color-ink; 
+    padding: 0.75rem 1.5rem; 
+    box-shadow: $shadow-std; 
+    cursor: default; 
+    transition: all 0.2s ease;
+
+    
+    &:hover {
+        transform: translate(2px, 2px); 
+        box-shadow: 0px 0px 0px; 
+        background-color: $color-white; 
+    }
+}
+
+// === RESPONSIVE  ===
+@media (max-width: 768px) {
+    .about__content {
+        grid-template-columns: 1fr; 
+        gap: 3rem;
+    }
+
+    .about__bio .section-title {
+        font-size: 2rem;
+    }
+
+    // Centramos los bloques en móvil para que se vea mejor
+    .stack-grid {
+        justify-content: flex-start;
+    }
+}

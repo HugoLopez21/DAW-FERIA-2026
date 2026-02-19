@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Avanzado</title>
+    <link rel="stylesheet" href="estilo5cssAvanzado.css"> <!--Abajo de titulo x que coja el css-->
+</head>
+<body>
+    
+
+    <!--Menu de navegacion-->
+    <nav class="nav">
+        <div class="container nav-inner">  <!--Dos clases en una -->
+            <a class="brand" href="#inicio">
+                <!--Algo decorativo de la web-->
+                <span class="brand-badge"></span> <!--Span para que sea algo rapido (logo)-->
+                <span>Editorial Minimal</span>
+            </a>
+
+            <div class="link">
+                <a role = "menuitem" href="#servicios">Servicios</a>
+                <a role = "menuitem" href="#portfolio">Portfolio</a>
+                <a role = "menuitem" href="#equipo">Equipo</a>
+                <a role = "menuitem" href="#contacto" class="cta">Contacto</a> <!--cta para que destaque-->
+            </div>
+        </div> 
+    </nav>
+    <!--Hero/Portada-->
+    <header id="inicio" class="hero">
+        <div class="container hero-grid">
+            <div class="hero-copy">
+                <!--Columna de texto : titulo, subtitulo y botones-->
+                    <!--Para que se adapte a cada pantalla uno estandar ya que div pesa mas-->
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none"></svg> 
+                    <!--viewBox desde el punto(0,0) hasta el (24 ancho y 24 alto), fill relleno-->
+                    <strong>Proyecto de clase</strong> 
+
+                <!-- Titulo grande -->
+                <h1 class="headline">Diseño editorial calido y minimalista.</h1>
+                <p class="sub">Fondo oscuro degradado</p>
+                <div class="hero-action">
+                    <a class="btn primary" href="#servicios">Ver componentes</a>
+                    <a class="btn ghost" href="#equipo">Carrusel</a>    
+                </div>
+            </div> 
+
+            <aside class="hero-card glass"> <!--Estilos flotantes-->
+                <div class="stats">
+                    <div class="stat"><b>0</b><h4>JavaScript</h4></div>
+                    <div class="stat"><b>12</b><h4>Responsibe</h4></div>
+                    <div class="stat"><b>AA</b><h4>Accesible</h4></div>
+                </div>
+                <p class="note">
+                    Haibo Xia
+                </p>
+            </aside>
+        </div>
+    </header>
+
+    <!--Seccion servicios/tarjetas-->
+    <section id="servicios" class="section">
+        <div class="container">
+            <h2>Servicios que demostramos</h2>
+            <p class="lead">Tarjetas con sombra suave, hover sutil y tipografia clara</p>
+
+            <div class="grid-3">
+                <article class="card"> <!--Cuando el contenido es independiente -->
+                    <div class="icon">A</div>
+                    <h3>Arte & Paleta</h3>
+                    <p>Colores cálidos y equilibrados sobre fondo oscuro.</p>
+                </article>
+                <article class="card">
+                    <div class="icon">M</div>
+                    <h3>Maquetacion</h3>
+                    <p>Grid adaptable con elegancia.</p>
+                </article>
+
+                <article class = "card">
+                    <div class="icon">I</div>
+                    <h3>Interfaz</h3>
+                    <p>Accesibilidad y fluidez visual</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!--Porfolio-->
+    <section id="portfolio">
+        <div class="container">
+            <h2>Portfolio</h2>
+            <p class="lead">Bloques con imagen y gradiente para legilibilidad del texto</p>
+            <div class="portfolio-grid">
+                                <!--<figure> imagen + descripción-->
+                <figure class="shot" style="background-image: url('https://images.unsplash.com/photo-1545235617-9465d2a55698?w=1600&auto=format&fit=crop');">
+                    <figcaption class="meta"><h4>Proyecto 1</h4><small>Landing con hero glass</small></figcaption>
+                </figure>
+
+                <figure class="shot" style="background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&auto=format&fit=crop');">
+                    <figcaption class="meta"><h4>Proyecto 2</h4><small>Grid responsivo</small></figcaption>
+                </figure>
+
+                <figure class="shot" style="background-image: url('https://images.unsplash.com/photo-1589578527966-fdac0f44566c?w=1600&auto=format&fit=crop');">
+                    <figcaption class="meta"><h4>Proyecto 3</h4><small>UI con tarjetas</small></figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!--Equipo/Carrusel-->
+    <section id="equipo " class="section">
+        <div class="container">
+            <div class="equipo-head">
+                <!--Cabecara-->
+                <div>
+                    <h2>Equipo</h2>
+                </div>
+            </div>
+            <div class="carrusel-wrap">
+                <div class="track-snap">
+                    <!--Cada miembro .member es una tarjeta (slide)-->
+                    <article class="member glass">
+                                <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop; alt="Ana López" />
+                                <h3>Ana López</h3>
+                                <p class="role">Directora Creativa</p>
+                            </article>
+
+                            <article class="member glass">
+                                <img class="avatar" src="https://images.unsplash.com/photo-1502685104226-ee32379fefbe?w=300&auto=format&fit=crop"; alt="Juan García" />
+                                <h3>Juan García</h3>
+                                <p class="role">Desarrollador Web</p>
+                            </article>
+
+                            <article class="member glass">
+                                <img class="avatar" src="https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?w=300&auto=format&fit=crop"; alt="María Rodríguez" />
+                                <h3>María Rodríguez</h3>
+                                <p class="role">Especialista SEO</p>
+                            </article>
+
+                            <article class="member glass">
+                                <img class="avatar" src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?w=300&auto=format&fit=crop"; alt="Ramón García" />
+                                <h3>Ramón García</h3>
+                                <p class="role">Especialista CSS</p>
+                            </article>
+
+                            <article class="member glass">
+                                <img class="avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=300&auto=format&fit=crop"; alt="Beatriz López" />
+                                <h3>Beatriz López</h3>
+                                <p class="role">UI/UX Designer</p>
+                            </article>
+                </div>
+            </div>
+            <p class="hint">Desplaza lateralmente para ver mas perfiles</p>
+        </div>
+
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2>Contacto</h2>
+
+            <form onsubmit="return false">
+                <div  class="form">
+                    <label>
+                        <span class="sr">Nombre</span>
+                        <input aria-label="Nombre" type="text" placeholder="Tu nombre" required>
+                    </label>
+                    <label>
+                        <span class="sr">Email</span>
+                        <input aria-label="Email" type="text" placeholder="Tu Email" required>
+
+                    </label>
+                    <label class="full">
+                        <span >Email</span>
+                        <textarea aria-label="Mensaje" placeholder="Tu mensaje" required></textarea>
+                    </label>
+                </div>
+
+                <div class="impro">
+                    <button class="btn primary submit" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            &copy;2025 Primera web CSS avanzada - Haibo Xia
+        </div>
+
+    </footer>
+
+
+
+
+</body>
+</html>

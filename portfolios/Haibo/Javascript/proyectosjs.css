@@ -1,0 +1,63 @@
+/* ===== RESET SIMPLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ===== BODY ===== */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    text-align: center;
+}
+
+/* ===== HEADER ===== */
+header {
+    padding: 20px 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* ===== SECCIÓN ===== */
+.js-section {
+    padding: 80px 20px;
+}
+
+.js-section h1 {
+    margin-bottom: 15px;
+}
+
+.js-section p {
+    margin-bottom: 40px;
+    color: #666;
+}
+
+/* ===== BOTONES ===== */
+.js-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 300px;
+    margin: auto;
+}
+
+.js-buttons a {
+    padding: 15px;
+    background: #4a90e2;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.js-buttons a:hover {
+    background: #357abd;
+    transform: translateY(-3px);
+}

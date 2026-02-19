@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+
+    <!-- Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="scss/style.css" />
+    <title>Portfolio Manuel Pérez Torres</title>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="site-header" id="siteHeader">
+      <div class="container header__inner">
+        <a class="header__logo" href="#home" aria-label="Ir a Home">
+          <img src="media/logo.png" alt="Logo Manuel" />
+          <span>Manuel</span>
+        </a>
+
+        <nav class="header__nav" aria-label="Navegación principal">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#service">Skills</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+
+        <button class="header__burger" type="button" aria-label="Abrir menú" aria-expanded="false">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="header__mobile" aria-hidden="true">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contacto</a>
+      </div>
+    </header>
+
+    <!-- HERO -->
+    <header class="hero hero--pro" id="home">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__glow hero__glow--a"></div>
+        <div class="hero__glow hero__glow--b"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <div class="hero__top">
+            <span class="hero__badge">
+              <span class="hero__dot" aria-hidden="true"></span>
+              Junior
+            </span>
+
+            <span class="hero__meta">
+              <i class="fas fa-location-dot" aria-hidden="true"></i>
+              Ibiza · ES
+            </span>
+          </div>
+
+          <h1>Manuel <span>Pérez Torres</span></h1>
+
+          <p class="hero__subtitle">
+            Desarrollador web full-stack centrado en funcionalidad, rendimiento y experiencia de usuario.
+          </p>
+
+          <div class="hero__chips" aria-label="Tecnologías principales">
+            <span class="chip">JavaScript</span>
+            <span class="chip">Python</span>
+            <span class="chip">Django</span>
+            <span class="chip">SCSS</span>
+            <span class="chip">SQL</span>
+          </div>
+
+          <div class="hero__stats" aria-label="Resumen">
+            <div class="stat">
+              <div class="stat__value">+10</div>
+              <div class="stat__label">Proyectos</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">Full-Stack</div>
+              <div class="stat__label">Perfil</div>
+            </div>
+            <div class="stat">
+              <div class="stat__value">DAW</div>
+              <div class="stat__label">Formación</div>
+            </div>
+          </div>
+
+          <div class="hero__actions">
+            <a href="#projects" class="button">
+              Ver proyectos
+            </a>
+
+            <a href="#contact" class="button button--outline">
+              Contactar
+            </a>
+
+            <a href="media/CV.pdf" class="button button--ghost">
+              <i class="fas fa-download"></i>
+              CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero__visual hero__visual--card" aria-label="Imagen del hero">
+          <div class="hero__visualFrame">
+            <img src="media/hero-illustration.png" alt="Ilustración de desarrollo web" />
+          </div>
+
+          <div class="hero__codeCard" aria-hidden="true">
+            <div class="codeCard__top">
+              <span class="codeDot codeDot--r"></span>
+              <span class="codeDot codeDot--y"></span>
+              <span class="codeDot codeDot--g"></span>
+              <span class="codeCard__title">portfolio.js</span>
+            </div>
+            <pre class="codeCard__code"><code>const stack = ["JS","Python","Django"];
+const build = () =&gt; "clean + fast";
+export default build();</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <a class="hero__scroll" href="#about" aria-label="Bajar a About">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </header>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <h2>About</h2>
+
+        <div class="about">
+          <div class="about__media">
+            <img src="media/img1.png" alt="Imagen About" class="about__img" />
+          </div>
+
+          <div class="about__content">
+            <p class="about__quote">
+              “Trabajo el desarrollo con calma, lógica y cuidado.”
+            </p>
+
+            <p class="about__text">
+              Desarrollador web especializado en backend y páginas dinámicas que requieran base de datos.
+              Me gusta construir proyectos sólidos, claros y mantenibles.
+            </p>
+
+            <div class="about__badges">
+              <span class="badge"><i class="fas fa-location-dot"></i> Ibiza</span>
+              <span class="badge"><i class="fas fa-laptop-code"></i> Full-stack</span>
+              <span class="badge"><i class="fas fa-database"></i> Backend</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section" id="service">
+      <div class="container">
+        <h2>Skills</h2>
+
+        <div class="skills-grid" aria-label="Habilidades y tecnologías">
+          <div class="skill-item">
+            <img src="media/skills/html5.svg" alt="HTML" />
+            <p>HTML</p>
+          </div>
+
+          <div class="skill-item">
+            <img src="media/skills/css.svg" alt="CSS / SCSS" />
+            <p>CSS / SCSS</p>
+          </div>
+
+          <div class="skill-item">
+            <img src="media/skills/javascript.svg" alt="JavaScript" />
+            <p>JavaScript</p>
+          </div>
+
+          <div class="skill-item">
+            <img src="media/skills/python.svg" alt="Python" />
+            <p>Python</p>
+          </div>
+
+          <div class="skill-item">
+            <img src="media/skills/django.svg" alt="Django" />
+            <p>Django</p>
+          </div>
+
+          <div class="skill-item">
+            <img src="media/skills/git.svg" alt="Git" />
+            <p>Git</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+
+        <div class="projects-tabs" role="tablist" aria-label="Filtros de proyectos">
+          <button class="button projects__tab is-active" type="button" data-filter="all" aria-selected="true">
+            Todos
+          </button>
+          <button class="button projects__tab" type="button" data-filter="web" aria-selected="false">
+            Web
+          </button>
+          <button class="button projects__tab" type="button" data-filter="foto" aria-selected="false">
+            Fotografía
+          </button>
+          <button class="button projects__tab" type="button" data-filter="otros" aria-selected="false">
+            Otros
+          </button>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid" aria-label="Listado de proyectos">
+          <button
+            class="project-card project"
+            type="button"
+            data-category="web"
+            data-title="Set i Mig"
+            data-desc="Siete y medio, tanto local como servidor."
+            data-img="media/setimig.png"
+          >
+            <img src="media/setimig.png" alt="Siete y medio" class="project-card__img" />
+            <h3>Set i Mig</h3>
+            <p>WEB</p>
+          </button>
+
+          <button
+            class="project-card project"
+            type="button"
+            data-category="web"
+            data-title="Barquitos"
+            data-desc="Juego de hundir la flota en local y con servidor."
+            data-img="media/barquitos.png"
+          >
+            <img src="media/barquitos.png" alt="Barquitos" class="project-card__img" />
+            <h3>Barquitos</h3>
+            <p>WEB</p>
+          </button>
+
+          <button
+            class="project-card project"
+            type="button"
+            data-category="foto"
+            data-title="Estambul"
+            data-desc="Fotos Estambul"
+            data-img="media/estambul.jpg"
+          >
+            <img src="media/estambul.jpg" alt="Estambul" class="project-card__img" />
+            <h3>Estambul</h3>
+            <p>FOTOGRAFÍA</p>
+          </button>
+
+          <button
+            class="project-card project"
+            type="button"
+            data-category="otros"
+            data-title="Veu d’Eivissa"
+            data-desc="Concepto web: música local y cultura de Ibiza (multi-sección y contenido)."
+            data-img="media/work-in-progress.png"
+          >
+            <img src="media/work-in-progress.png" alt="Veu d’Eivissa" class="project-card__img" />
+            <h3>Veu d’Eivissa</h3>
+            <p>OTROS</p>
+          </button>
+        </div>
+      </div>
+
+      <!-- MODAL -->
+      <div class="pmodal" id="pmodal" aria-hidden="true">
+        <div class="pmodal__backdrop" data-close></div>
+
+        <div class="pmodal__panel" role="dialog" aria-modal="true" aria-label="Detalle del proyecto">
+          <button class="pmodal__close" type="button" aria-label="Cerrar" data-close>
+            <i class="fas fa-times"></i>
+          </button>
+
+          <div class="pmodal__media">
+            <img id="pmodalImg" src="" alt="" />
+          </div>
+
+          <div class="pmodal__content">
+            <h3 id="pmodalTitle"></h3>
+            <p id="pmodalDesc"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Contacto</h2>
+
+        <p class="contact__text">¿Necesitas ayuda para crear tu página web?</p>
+
+        <div class="contact__actions">
+          <a class="button" href="mailto:sm24.mperezt@iessantamariadeivissa.com">
+            Escríbeme
+          </a>
+        </div>
+
+        <div class="contact__social" aria-label="Redes sociales">
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+          <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <p>Created by <strong>Manuel Pérez Torres</strong> | All Reserved!</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

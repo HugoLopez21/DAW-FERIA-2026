@@ -1,0 +1,18 @@
+// scss/style.scss
+
+// 1. BASE (Configuración y cimientos)
+@import 'base/variables';
+@import 'base/reset';
+@import 'base/global';
+
+// 2. LAYOUT (Estructura de la página)
+
+@import 'layout/header';
+@import 'layout/hero';
+@import 'layout/about';
+@import 'layout/masonry';
+@import 'layout/footer';
+@import 'layout/modal';
+
+// 3. COMPONENTS (Piezas pequeñas)
+@import 'components/buttons';

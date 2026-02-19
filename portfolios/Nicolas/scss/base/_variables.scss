@@ -1,0 +1,16 @@
+// scss/_variables.scss
+
+// --- PALETA DE COLORES (Design System) ---
+$color-canvas: #EAE7DC; // Hueso / Arena (Fondo)
+$color-ink: #0F0F0F; // Negro Profundo (Textos y Bordes)
+$color-accent: #C16A4F; // Terracota (Detalles)
+$color-white: #FFFFFF;
+
+// --- TIPOGRAFÍAS ---
+$font-display: 'Space Grotesk', sans-serif; // Títulos
+$font-body: 'Inter', sans-serif; // Textos
+
+// --- FÍSICA (Bordes y Sombras) ---
+$border-std: 2px solid $color-ink;
+$shadow-std: 3px 3px 0px $color-ink; // Sombra dura
+$shadow-hover: 0px 0px 0px $color-ink;

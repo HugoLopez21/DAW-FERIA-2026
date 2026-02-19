@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    text-align: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    padding: 20px 0;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.logo a {
+    text-decoration: none;
+    color: #333;
+}
+
+.django-section {
+    padding: 80px 20px;
+}
+
+.django-section h1 {
+    margin-bottom: 20px;
+}
+
+.django-section p {
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 1.6;
+}
+
+.django-images {
+    margin-top: 40px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.django-images img {
+    width: 700px;      
+    max-width: 100%;    
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.django-images img:hover {
+    transform: scale(1.05);
+}

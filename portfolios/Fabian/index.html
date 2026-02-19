@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio profesional - Desarrollo Web" />
+    <title>Mi Portfolio | Desarrollo Web</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-content">
+          <a href="#home" class="brand-badge btn"></a>
+          <ul class="nav-links">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#about">Sobre mí</a></li>
+            <li><a href="#skills">Habilidades</a></li>
+            <li><a href="#projects">Proyectos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+          </ul>
+          <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="home" class="hero">
+      <div id="particles-js" class="particles"></div>
+      <div class="container">
+        <div class="hero-content">
+          <h1 class="font-title"><span id="typed"></span></h1>
+          <p class="hero-description">
+            Fabian Rosas | Estudiante de DAW <br />Diseño interfaces prácticas
+            que ayudan a que tu marca <br />
+            se vea bien en cualquier pantalla.
+          </p>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">
+              Ver Proyectos <i class="fas fa-arrow-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              Contáctame <i class="fas fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section bg-secondary">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="font-title">Sobre <span>Mí</span></h2>
+          <p>Conoce un poco más sobre mi trayectoria</p>
+        </div>
+        <div class="about-content">
+          <div class="about-text">
+            <h3>Desarrollador Web en Formación</h3>
+            <p>
+              Actualmente curso segundo año de DAW y me centro en crear sitios
+              web que destaquen por su diseño y funcionalidad.
+            </p>
+            <p>
+              Mi trabajo se centra en el frontend, disfruto del proceso de
+              convertir ideas en interfaces limpias y coherentes.
+            </p>
+            <p>
+              Cada día busco aprender algo nuevo para seguir mejorando mis
+              habilidades y ofrecer lo mejor de mí en cada proyecto.
+            </p>
+            <a href="#contact" class="btn btn-primary spacetop3"
+              >Trabajemos Juntos</a
+            >
+          </div>
+          <div class="about-stats">
+            <div class="stat-card">
+              <div class="stat-number">2</div>
+              <div class="stat-label">Años de Formación</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">+5</div>
+              <div class="stat-label">Proyectos Realizados</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">+3</div>
+              <div class="stat-label">Lenguajes de Programación</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">Compromiso</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section bg-primary">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="font-title">Mis <span>Habilidades</span></h2>
+          <p>Tecnologías y herramientas que utilizo</p>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-html5"></i>
+            </div>
+            <h3>HTML5</h3>
+            <p class="text-medium-gray">
+              Definir la estructura y el contenido web
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt"></i>
+            </div>
+            <h3>CSS3</h3>
+            <p class="text-medium-gray">Diseño responsive y moderno</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-sass"></i>
+            </div>
+            <h3>SASS</h3>
+            <p class="text-medium-gray">Estilos organizados y escalables</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-js"></i>
+            </div>
+            <h3>JavaScript</h3>
+            <p class="text-medium-gray">Interactividad y dinamismo</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-git-alt"></i>
+            </div>
+            <h3>Git & GitHub</h3>
+            <p class="text-medium-gray">Control de versiones</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fab fa-figma"></i>
+            </div>
+            <h3>Figma</h3>
+            <p class="text-medium-gray">Diseño de interfaces</p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fa-brands fa-react"></i>
+            </div>
+            <h3>React</h3>
+            <p class="text-medium-gray">
+              Interfaces dinámicas basadas en componentes
+            </p>
+          </div>
+          <div class="skill-card">
+            <div class="skill-icon">
+              <i class="fa-brands fa-bootstrap"></i>
+            </div>
+            <h3>Bootstrap</h3>
+            <p class="text-medium-gray">
+              Framework para diseño adaptable rápido
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section bg-secondary">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="font-title">Mis <span>Proyectos</span></h2>
+          <p>Algunos de mis trabajos más recientes</p>
+        </div>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-image">
+              <img src="media/pulse.svg" alt="Proyecto 2" />
+            </div>
+            <div class="project-content">
+              <h3>The Pulse</h3>
+              <p>
+                Booking experience centrada en el minimalismo y el descanso
+                visual.
+              </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>SASS</span>
+                <span>React</span>
+              </div>
+              <div class="project-links">
+                <a href="#">
+                  <i class="fas fa-external-link-alt"></i> Ver Demo
+                </a>
+                <a href="#"> <i class="fab fa-github"></i> Próximamente </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="media/beanter.svg" alt="Beanter" />
+            </div>
+            <div class="project-content">
+              <h3>Beanter</h3>
+              <p>
+                Estética cálida y minimalista para una experiencia de café
+                premium.
+              </p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+              </div>
+              <div class="project-links">
+                <a href="media/Beanter.pdf">
+                  <i class="fas fa-external-link-alt"></i> Ver Demo
+                </a>
+                <a href="#"> <i class="fab fa-github"></i> Próximamente </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-image">
+              <img src="media/jew.svg" alt="Proyecto 3" />
+            </div>
+            <div class="project-content">
+              <h3>Lux</h3>
+              <p>Interfaz limpia y esencial centrada en la pureza del metal.</p>
+              <div class="project-tags">
+                <span>HTML5</span>
+                <span>Bootstrap</span>
+                <span>React</span>
+              </div>
+              <div class="project-links">
+                <a href="#">
+                  <i class="fas fa-external-link-alt"></i> Ver Demo
+                </a>
+                <a href="#"> <i class="fab fa-github"></i> Próximamente </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section bg-primary">
+      <div class="container">
+        <div class="section-title">
+          <h2 class="font-title">Contacto</h2>
+          <p>¿Tienes un proyecto en mente? ¡Hablemos!</p>
+        </div>
+        <div class="contact-container">
+          <form class="contact-form">
+            <div class="form-group">
+              <label for="name">Nombre</label>
+              <input type="text" id="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="tu@email.com"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Asunto</label>
+              <input type="text" id="subject" placeholder="Asunto" required />
+            </div>
+            <div class="form-group">
+              <label for="message">Mensaje</label>
+              <textarea
+                id="message"
+                placeholder="Escribe tu mensaje aquí..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-final">
+              Enviar Mensaje <i class="fas fa-paper-plane"></i>
+            </button>
+          </form>
+
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <h4>Email</h4>
+              <a>afralex.ra@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <h4>Ubicación</h4>
+              <p>Ibiza, España</p>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <h4>Teléfono</h4>
+              <a>(+34) 603 86 08 92</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="social-links">
+            <a href="https://github.com" aria-label="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://linkedin.com" aria-label="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </div>
+          <p>
+            &copy; 2026 Portfolio Fabian Rosas | Todos los derechos reservados
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

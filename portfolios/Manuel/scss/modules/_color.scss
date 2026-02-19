@@ -1,0 +1,48 @@
+$halfwhite: rgba(255,255,255, 0.5);
+$quarterwhite: rgba(255,255,255, 0.25);
+$halfblack: rgba(0,0,0, 0.5);
+$quarterblack: rgba(0,0,0, 0.25);
+$blue: #B2CCE8;
+$beige: #dfdddc;
+$halfblue: rgba(219,193,213, 0.5);
+$halfbeige: rgba(221, 216, 216, 0.5);
+
+.bg-image{
+    background-color: #bad6e9;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.bg-blue{
+    background: $blue;
+}
+.bg-beige{
+    background: $beige;
+}
+.bg-halfblue{
+    background: $halfblue;
+}
+.bg-halfbeige{
+    background: $halfbeige;
+}
+.bg-halfblack{
+    background: $halfblack;
+}
+.bg-quarterblack{
+    background: $quarterblack;
+}
+.black{
+    color: black;
+}
+.white{
+    color: white;
+}
+.halfwhite{
+    color: $halfwhite;
+}
+.halfblack{
+    color: $halfblack;
+}
+.quarterwhite{
+    color: $quarterwhite;
+}

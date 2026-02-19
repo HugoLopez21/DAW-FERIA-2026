@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alma de vida</title>
+    <link rel="stylesheet" href="css/estilos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-inner container">
+        <a href="#" class="logo">ALMA DE VIDA</a>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li><a href="#nueva-coleccion">NUEVA COLECCIÓN</a></li>
+            <li><a href="#nosotros">SOBRE NOSOTROS</a></li>
+            <li><a href="#tiendas">NUESTRAS TIENDAS</a></li>
+          </ul>
+        </nav>
+
+        <div class="header-actions">
+          <!-- BOTÓN LUPA -->
+          <button
+            class="icon-button"
+            id="search-toggle"
+            aria-label="Abrir buscador"
+          >
+            <span class="icon-svg">
+              <!-- Lupa SVG -->
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M15.5 14h-.79l-.28-.27a6 6 0 1 0-1.41 1.41l.27.28v.79L19 20.5 20.5 19l-5-5zm-5.5 1a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"
+                />
+              </svg>
+            </span>
+          </button>
+
+          <!-- BARRA DE BÚSQUEDA QUE SE DESPLIEGA -->
+          <div class="search-container">
+            <form class="search-form" id="search-form">
+              <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar"
+                aria-label="Buscar"
+              />
+            </form>
+          </div>
+
+          <!-- BOTÓN CESTA -->
+          <button class="cart-button" id="cart-button" aria-label="Abrir cesta">
+            <span class="cart-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M7 8V7a5 5 0 0 1 10 0v1h2a1 1 0 0 1 .99 1.141l-1.5 10A2 2 0 0 1 16.51 21h-9a2 2 0 0 1-1.98-1.859l-1.5-10A1 1 0 0 1 5 8h2zm2 0h6V7a3 3 0 0 0-6 0v1z"
+                />
+              </svg>
+            </span>
+            <span class="cart-count" id="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+    <!-- RESULTADOS DE BÚSQUEDA DESPLEGABLE -->
+    <div class="search-results" id="search-results"></div>
+
+    <main>
+      <!-- HERO / SLIDER -->
+      <section class="hero hero-video" id="hero">
+        <!-- vídeo de fondo -->
+        <video class="hero-video-bg" autoplay muted loop playsinline>
+          <!-- ajusta la ruta si el archivo está en otra carpeta -->
+          <source src="media/hero.mp4" type="video/mp4" />
+          Tu navegador no soporta vídeo HTML5.
+        </video>
+
+        <!-- capa oscura encima del vídeo -->
+        <div class="hero-overlay"></div>
+
+        <!-- contenido del hero -->
+        <div class="hero-content container">
+          <p class="hero-badge">NUEVA TEMPORADA</p>
+          <h1>Colección Otoño</h1>
+          <p class="hero-text">
+            Prendas cálidas, colores tierra y tejidos suaves para acompañarte en
+            todos tus planes de otoño.
+          </p>
+          <a href="#nueva-coleccion" class="btn-primario">COMPRA AHORA</a>
+        </div>
+      </section>
+
+      <!-- INFO SERVICIOS -->
+      <section class="badges">
+        <div class="container badges-grid">
+          <div class="badge">
+            <span class="badge-title">100% PAGO SEGURO</span>
+            <p>
+              Compra con total tranquilidad con nuestras formas de pago
+              verificadas.
+            </p>
+          </div>
+          <div class="badge">
+            <span class="badge-title">ENVÍO GRATIS DESDE 80€</span>
+            <p>Recibe tu pedido en casa sin gastos extra a partir de 80€.</p>
+          </div>
+          <div class="badge">
+            <span class="badge-title">PRODUCCIÓN LOCAL</span>
+            <p>
+              Prendas diseñadas con cariño y producidas de forma responsable.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- NUEVA COLECCIÓN -->
+      <section class="productos" id="nueva-coleccion">
+        <div class="container">
+          <header class="section-header">
+            <div>
+              <p class="section-kicker">NOVEDADES</p>
+              <h2>Nueva colección</h2>
+            </div>
+            <a href="#" class="link-ver-todo">Ver todos los productos</a>
+          </header>
+
+          <div class="product-grid">
+            <!-- PRODUCTO 1 -->
+            <article class="product-card">
+              <div class="product-image">
+                <img
+                  src="media/1conjunto.jpeg"
+                  alt="Chaleco de punto beige con cremallera"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Chaleco Emma</h3>
+                <p class="product-desc">
+                  Punto suave, cuello alto y cierre frontal para un look cómodo
+                  y urbano.
+                </p>
+                <p class="price">39,99 €</p>
+                <button class="btn-secundario">Añadir a la cesta</button>
+              </div>
+            </article>
+
+            <!-- PRODUCTO 2 -->
+            <article class="product-card" id="chaquetas">
+              <div class="product-image">
+                <img
+                  src="media/2conjunto.jpeg"
+                  alt="Chaqueta acolchada verde"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Chaqueta Creta</h3>
+                <p class="product-desc">
+                  Ligera, acolchada y perfecta para los días fríos sin perder
+                  estilo.
+                </p>
+                <p class="price">49,99 €</p>
+                <button class="btn-secundario">Añadir a la cesta</button>
+              </div>
+            </article>
+
+            <!-- PRODUCTO 3 -->
+            <article class="product-card" id="jerseys">
+              <div class="product-image">
+                <img
+                  src="media/3conjunto.jpeg"
+                  alt="Jersey rojo de punto con puños en contraste"
+                />
+              </div>
+              <div class="product-info">
+                <h3>Jersey Lisse</h3>
+                <p class="product-desc">
+                  Jersey amplio en tono teja, con puños en contraste y tacto
+                  suave.
+                </p>
+                <p class="price">45,00 €</p>
+                <button class="btn-secundario">Añadir a la cesta</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- TIENDAS - CARRUSEL -->
+      <section class="stores-carousel" id="tiendas">
+        <div class="container">
+          <header class="section-header stores-header">
+            <div>
+              <p class="section-kicker">NUESTRAS TIENDAS</p>
+              <h2>Descubre nuestros espacios</h2>
+            </div>
+          </header>
+
+          <div class="stores-carousel-wrapper">
+            <button
+              class="stores-arrow stores-arrow--left"
+              type="button"
+              aria-label="Tienda anterior"
+              data-dir="prev"
+            >
+              ‹
+            </button>
+
+            <div class="stores-viewport">
+              <div class="stores-track">
+                <!--  TIENDA 1 -->
+                <article class="store-slide is-active" data-store-index="0">
+                  <div class="store-slide-inner">
+                    <img src="media/marbellat.jpg" alt="Tienda en Marbella" />
+                    <div class="store-overlay">
+                      <p class="store-city">MARBELLA</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!--  TIENDA 2 -->
+                <article class="store-slide" data-store-index="1">
+                  <div class="store-slide-inner">
+                    <img src="media/barcelonat.jpg" alt="Tienda en Barcelona" />
+                    <div class="store-overlay">
+                      <p class="store-city">BARCELONA</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!--  TIENDA 3  -->
+                <article class="store-slide" data-store-index="2">
+                  <div class="store-slide-inner">
+                    <img src="media/madridt.jpg" alt="Tienda en Madrid" />
+                    <div class="store-overlay">
+                      <p class="store-city">MADRID</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!--  TIENDA 4  -->
+                <article class="store-slide" data-store-index="3">
+                  <div class="store-slide-inner">
+                    <img src="media/sevillat.jpg" alt="Tienda en Sevilla" />
+                    <div class="store-overlay">
+                      <p class="store-city">SEVILLA</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- TIENDA 5  -->
+                <article class="store-slide" data-store-index="4">
+                  <div class="store-slide-inner">
+                    <img src="media/valenciat.jpg" alt="Tienda en Valencia" />
+                    <div class="store-overlay">
+                      <p class="store-city">VALENCIA</p>
+                    </div>
+                  </div>
+                </article>
+
+                <!--  TIENDA 6  -->
+                <article class="store-slide" data-store-index="5">
+                  <div class="store-slide-inner">
+                    <img src="media/bilbaot.jpg" alt="Tienda en Bilbao" />
+                    <div class="store-overlay">
+                      <p class="store-city">BILBAO</p>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <button
+              class="stores-arrow stores-arrow--right"
+              type="button"
+              aria-label="Siguiente tienda"
+              data-dir="next"
+            >
+              ›
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- BLOQUE IMPACTO  -->
+      <section class="impact-wrapper" id="impacto">
+        <!-- SECCIÓN 1 -->
+        <section class="impact impact--one">
+          <div class="impact__media">
+            <img
+              src="media/valenciat.jpg"
+              alt="Pescador recogiendo plástico del mar"
+            />
+          </div>
+          <div class="impact__content">
+            <p class="impact__kicker">DESDE 2026</p>
+            <h2 class="impact__title">ALMA DE VIDA</h2>
+            <p class="impact__text">
+              En 2006, tras mas de 40 años de experiencia dirigiendo uno de los
+              grupos más relevantes en el sector clothes en España, José Gil
+              lanza la primera colección de Alma en Vida. Jose Gil, es la
+              segunda generación de empresarios textiles.
+            </p>
+          </div>
+        </section>
+
+        <!-- SECCIÓN 2 -->
+        <section class="impact impact--two">
+          <div class="impact__content">
+            <p class="impact__kicker">AYUDANDOTE</p>
+            <h2 class="impact__title">CREANDO PRENDAS<br />SOLO PARA TÍ</h2>
+            <p class="impact__text">
+              En estas tiendas, ofrecen las mejores marcas de ropa italianas y
+              españolas y su marca propia. Son pioneros en innovación, sistemas
+              logísticos y gestión de punto de venta, y se convierten en un
+              referente en nuestro país, con más de 60 puntos de venta en todo
+              el territorio nacional.
+            </p>
+            <a href="#" class="impact__link">DESCUBRE MÁS</a>
+          </div>
+          <div class="impact__media">
+            <img
+              src="media/madridt.jpg"
+              alt="Botellas de plástico e hilo reciclado"
+            />
+          </div>
+        </section>
+      </section>
+
+      <!-- NEWSLETTER -->
+      <section class="newsletter-hero" id="contacto">
+        <div class="newsletter-hero-overlay"></div>
+
+        <div class="container newsletter-hero-inner">
+          <!-- COLUMNA IZQUIERDA: NEWSLETTER -->
+          <div class="newsletter-hero-left">
+            <h2>NO TE PIERDAS NADA</h2>
+            <p class="newsletter-hero-subtitle">
+              RECIBE OFERTAS EXCLUSIVAS Y TODAS NUESTRAS NOVEDADES
+            </p>
+
+            <form class="newsletter-hero-form">
+              <div class="newsletter-hero-line">
+                <span class="newsletter-hero-icon">✉</span>
+                <input type="email" placeholder="Email" required />
+              </div>
+
+              <button type="submit" class="newsletter-hero-btn">
+                SUSCRIBIRSE
+              </button>
+
+              <label class="newsletter-hero-check">
+                <input type="checkbox" required />
+                <span>
+                  He leído y acepto la <a href="#">Política de privacidad</a> y
+                  las <a href="#">Condiciones de uso</a>.
+                </span>
+              </label>
+            </form>
+          </div>
+
+          <!-- COLUMNA DERECHA: SÍGUENOS -->
+          <div class="newsletter-hero-right">
+            <h2>SÍGUENOS</h2>
+            <p class="newsletter-hero-subtitle">
+              DESCUBRE NUESTROS PRODUCTOS EN REDES SOCIALES
+            </p>
+
+            <div class="newsletter-hero-social">
+              <a href="#" class="social-round" aria-label="Facebook">f</a>
+              <a href="#" class="social-round" aria-label="Instagram">in</a>
+              <a href="#" class="social-round" aria-label="Pinterest">p</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- INFO WEB -->
+      <section class="info">
+        <div class="container info-grid">
+          <div class="info-item">
+            <h3>Atención personalizada</h3>
+            <p>
+              Te ayudamos a elegir la talla y el look que mejor se adapte a ti.
+            </p>
+          </div>
+          <div class="info-item">
+            <h3>Pago seguro</h3>
+            <p>Trabajamos con pasarelas de pago seguras y de confianza.</p>
+          </div>
+          <div class="info-item">
+            <h3>Calidad garantizada</h3>
+            <p>Seleccionamos cuidadosamente cada tejido y acabado.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- OVERLAY CESTA -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- PANEL LATERAL CESTA -->
+    <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+      <div class="cart-drawer-header">
+        <h2>Cesta</h2>
+        <button class="cart-close" id="cart-close" aria-label="Cerrar cesta">
+          ×
+        </button>
+      </div>
+
+      <div class="cart-drawer-body">
+        <div class="cart-items" id="cart-items">
+          <!-- aquí se pintan los productos con JS -->
+        </div>
+      </div>
+
+      <div class="cart-drawer-footer">
+        <div class="cart-total-line">
+          <span>Total</span>
+          <span id="cart-total">0,00 €</span>
+        </div>
+        <button class="cart-checkout-btn">FINALIZAR COMPRA</button>
+      </div>
+    </aside>
+
+    <!-- FOOTER -->
+    <div class="footer">
+      <div id="button"></div>
+      <div class="container footer-grid">
+        <div class="footer-block">
+          <h4>Alma de Vida</h4>
+          <p>
+            Prendas cómodas y versátiles pensadas para mujeres auténticas.
+            Diseñadas con cariño para acompañarte cada día.
+          </p>
+        </div>
+        <div class="footer-block">
+          <h5>Empresa</h5>
+          <ul>
+            <li><a href="#">Quiénes somos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h5>Productos</h5>
+          <ul>
+            <li><a href="#nueva-coleccion">Colecciones</a></li>
+            <li><a href="#jerseys">Jerseys y chaquetas</a></li>
+            <li><a href="#accesorios">Accesorios</a></li>
+          </ul>
+        </div>
+        <div class="footer-block">
+          <h5>Información</h5>
+          <ul>
+            <li><a href="#">Envío y devoluciones</a></li>
+            <li><a href="#">Guía de tallas</a></li>
+            <li><a href="#">Condiciones de uso</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container footer-bottom-inner">
+          <span>COPYRIGHT © 2025 AlmaDeVida</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,33 @@
+.juego {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+#tablero {
+    display: grid;
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
+    gap: 2px;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.celda {
+    width: 40px;
+    height: 40px;
+    background-color: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.celda img {
+    width: 30px;
+    height: 30px;
+}
+
+.celda:disabled {
+    cursor: default;
+}

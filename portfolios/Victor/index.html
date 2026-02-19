@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio — Víctor Muñoz Prats</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="src/css/main.css" />
+</head>
+<body>
+  <nav class="nav" id="nav" aria-label="Navegació principal">
+    <div class="container nav__container">
+      <a class="nav__brand" href="#top">VMP</a>
+
+      <ul class="nav__links">
+        <li><a href="#about">Sobre mi</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero" role="banner">
+    <div class="container hero__container">
+      <p class="hero__kicker">PORTFOLIO</p>
+
+      <h1 class="hero__title">
+        <span>Víctor</span>
+        <span>Muñoz</span>
+        <span>Prats </span>
+      </h1>
+
+      <div class="hero__right">
+        <div class="hero__portrait">
+            <img src="media/portrait.png" alt="Víctor Muñoz">
+        </div>
+
+        <p class="hero__statement">
+          Exploro la intersección entre<br>
+          diseño, cultura y código.
+        </p>
+      </div>
+    </div>
+  </header>
+
+  <section class="about" id="about">
+      <div class="about__bg-number">01</div>
+
+  <div class="container about__container">
+  
+
+    <p class="about__eyebrow">01 — SOBRE MI</p>
+
+    <div class="about__content">
+      <h2 class="about__headline">
+        Creo experiencias digitales con
+        sensibilidad editorial y atención al detalle.
+      </h2>
+
+      <div class="about__body">
+        <p>
+          Me interesa la intersección entre diseño, cultura visual y código.
+          Trabajo con una mirada artística: composición, ritmo y tipografía.
+        </p>
+
+        <p>
+          Busco proyectos donde la forma y el contenido vayan juntos: identidad,
+          web y experiencias que respiren y tengan carácter.
+        </p>
+
+        <ul class="about__meta">
+          <li><span>Base</span> Ibiza</li>
+          <li><span>Focus</span> UI / Front-end</li>
+          <li><span>Herramientas</span> Figma, HTML, Sass, JS, Python</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="skills" id="skills">
+  <div class="skills__bg-number">02</div>
+
+  <div class="container skills__container">
+
+    <p class="skills__eyebrow">02 — HABILIDADES</p>
+
+    <div class="skills__content">
+
+      <div class="skills__column">
+        <h3 class="skills__title">Diseño</h3>
+        <ul>
+          <li>Dirección artística</li>
+          <li>Diseño editorial</li>
+          <li>UX / UI</li>
+          <li>Branding</li>
+        </ul>
+      </div>
+
+      <div class="skills__column">
+        <h3 class="skills__title">Desarrollo</h3>
+        <ul>
+          <li>HTML / CSS / Sass</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>SQL</li>
+          <li>Responsive design</li>
+          <li>Accessibilidad</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="projects__bg-number">03</div>
+
+  <div class="container projects__container">
+    <p class="projects__eyebrow">03 — PROYECTOS</p>
+
+    <div class="carousel" aria-label="Carrusel de projectes">
+      <button class="carousel__btn carousel__btn--prev" type="button" aria-label="Anterior">
+        ←
+      </button>
+
+      <div class="carousel__track" id="projectsTrack" tabindex="0">
+        <!-- Slide 1 -->
+        <a class="slide" href="#" aria-label="Veure projecte: Projecte 01">
+          <img class="slide__img" src="media/proyecto1.png" alt="Projecte 01" />
+          <div class="slide__overlay">
+            <p class="slide__year">2025</p>
+            <h3 class="slide__title">Proyecto 01</h3>
+            <p class="slide__tags">Identidad · Web · UI</p>
+          </div>
+        </a>
+
+        <!-- Slide 2 -->
+        <a class="slide" href="#" aria-label="Veure projecte: Projecte 02">
+          <img class="slide__img" src="media/proyecto2.png" alt="Projecte 02" />
+          <div class="slide__overlay">
+            <p class="slide__year">2024</p>
+            <h3 class="slide__title">Proyecto 02</h3>
+            <p class="slide__tags">Backend - Gestión de reservas</p>
+          </div>
+        </a>
+
+        <!-- Slide 3 -->
+        <a class="slide" href="#" aria-label="Veure projecte: Projecte 03">
+          <img class="slide__img" src="media/proyecto3.png" alt="Projecte 03" />
+          <div class="slide__overlay">
+            <p class="slide__year">2024</p>
+            <h3 class="slide__title">Proyecto 03</h3>
+            <p class="slide__tags">Front-end · Interacción</p>
+          </div>
+        </a>
+      </div>
+
+      <button class="carousel__btn carousel__btn--next" type="button" aria-label="Següent">
+        →
+      </button>
+    </div>
+  </div>
+</section>
+<section class="contact" id="contact">
+  <div class="contact__bg-number">04</div>
+
+  <div class="container contact__container">
+    <p class="contact__eyebrow">04 — CONTACTO</p>
+
+    <div class="contact__content">
+      <h2 class="contact__headline">
+        Habla conmigo
+      </h2>
+
+      <div class="contact__body">
+        <p class="contact__text">
+          Si tienes un proyecto, una idea o quieres colaborar, escríbeme.
+          Respondo rápidamente y me encanta hablar de diseño, cultura y código.
+        </p>
+
+        <div class="contact__cta">
+          <a class="contact__stamp" href="mailto:victormprats@gmail.com" aria-label="Enviar correu">
+  <span class="contact__stamp-label">Email</span>
+  <span class="contact__stamp-mail">victormprats@gmail.com</span>
+</a>
+
+          <p class="contact__small">Barcelona - Ibiza · Disponible para proyectos</p>
+        </div>
+
+        <ul class="contact__links">
+          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="#" target="_blank" rel="noopener">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer__container">
+    <p>© <span id="year"></span> Víctor Muñoz Prats</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+
+
+      <script>
+      const track = document.getElementById("projectsTrack");
+      const prevBtn = document.querySelector(".carousel__btn--prev");
+      const nextBtn = document.querySelector(".carousel__btn--next");
+
+      const slideWidth = 648; // ample slide + gap aproximat
+
+      nextBtn.addEventListener("click", () => {
+        track.scrollBy({ left: slideWidth, behavior: "smooth" });
+      });
+
+      prevBtn.addEventListener("click", () => {
+        track.scrollBy({ left: -slideWidth, behavior: "smooth" });
+      });
+      </script>
+
+  <script>
+  const nav = document.getElementById("nav");
+  const hero = document.querySelector(".hero");
+
+  const observer = new IntersectionObserver(
+    ([entry]) => {
+      // Quan el hero NO és visible -> mostrem nav
+      if (entry.isIntersecting) nav.classList.remove("is-visible");
+      else nav.classList.add("is-visible");
+    },
+    { threshold: 0.1 }
+  );
+
+  observer.observe(hero);
+</script>
+
+
+
+</body>
+</html>

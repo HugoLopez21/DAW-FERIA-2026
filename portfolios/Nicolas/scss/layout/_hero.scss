@@ -1,0 +1,77 @@
+// scss/layout/_hero.scss
+
+.hero {
+
+    display: block;
+    padding: 8rem 0 6rem 0;
+    border-bottom: 2px solid $color-ink;
+
+    &__content {
+        width: 100%;
+        text-align: left;
+        display: block;
+    }
+
+    &__title {
+        font-family: $font-display;
+        font-size: clamp(3rem, 8vw, 6.5rem);
+        line-height: 0.95;
+        margin-bottom: 2.5rem;
+        letter-spacing: -3px;
+        color: $color-ink;
+        text-transform: uppercase;
+
+        // 3. Limitamos el ancho para que no sea eterno,
+        // pero manteniendo el inicio a la izquierda.
+        max-width: 100%;
+        word-break: break-word;
+
+        .text-highlight {
+            display: block;
+            color: $color-ink;
+            font-weight: 400;
+            font-style: italic;
+            opacity: 0.9;
+        }
+    }
+
+    &__text {
+        font-family: $font-body;
+        font-size: 1.2rem;
+        line-height: 1.6;
+
+        max-width: 550px;
+
+        margin-bottom: 3.5rem;
+        color: rgba($color-ink, 0.8);
+        font-weight: 400;
+
+        text-align: left;
+        margin-left: 0;
+    }
+
+    &__actions {
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
+        justify-content: flex-start;
+
+        @media (max-width: 600px) {
+            flex-direction: column;
+            align-items: flex-start;
+            width: 100%;
+
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+}
+
+// Ajuste responsive para móviles
+@media (max-width: 768px) {
+    .hero {
+        padding: 4rem 0 4rem 0;
+    }
+}

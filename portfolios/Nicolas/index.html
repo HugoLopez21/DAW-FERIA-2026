@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="es">
+<!-- Idioma del documento: español -->
+
+<head>
+    <!-- Codificación de caracteres (tildes, ñ, símbolos) -->
+    <meta charset="UTF-8">
+
+    <!-- Configuración responsive para móviles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripción para SEO -->
+    <meta name="description" content="Portfolio de Diseño Web - Estilo Curated Brutalism - Nicolás Maroni">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Portfolio | Nicolás Maroni</title>
+
+    <!-- Preconexión para mejorar la carga de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Importación de fuentes tipográficas -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Hoja de estilos principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===== HEADER: logo + navegación ===== -->
+    <header class="main-header">
+        <div class="container header__content">
+
+            <!-- Logo / nombre personal -->
+            <a href="#" class="logo">Nicolás Maroni</a>
+
+            <!-- Menú de navegación principal -->
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__item">
+                        <a href="#about" class="nav-menu__link">Sobre mí</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="#work" class="nav-menu__link">Proyectos</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <!-- Link activo -->
+                        <a href="#contact" class="nav-menu__link nav-menu__link--active">Contacto</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <main>
+
+        <!-- ===== SECCIÓN HERO / PRESENTACIÓN ===== -->
+        <section class="hero">
+            <div class="container hero__content">
+
+                <!-- Título principal -->
+                <h1 class="hero__title">
+                    DISEÑADOR WEB <br>
+                    <span class="text-highlight">& MAQUETADOR UI.</span>
+                </h1>
+
+                <!-- Texto descriptivo -->
+                <p class="hero__text">
+                    Creando experiencias digitales bajo la filosofía del
+                    <strong>Curated Brutalism</strong>. Enfoque en estructura y
+                    tipografía.
+                </p>
+
+                <!-- Botones de acción -->
+                <div class="hero__actions">
+
+                    <!-- Enlace a la sección de trabajos -->
+                    <a href="#work" class="btn btn--primary">Ver Galería</a>
+
+                    <!-- Descarga de CV en PDF -->
+                    <a href="assets/docs/CV.pdf" target="_blank" class="btn btn--secondary">
+                        Descargar CV
+
+                        <!-- Icono SVG del botón -->
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M21 15V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V15"
+                                stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                                stroke-linejoin="bevel" />
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                                stroke-linejoin="bevel" />
+                            <path d="M12 15V3" stroke="currentColor" stroke-width="2" stroke-linecap="square"
+                                stroke-linejoin="bevel" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <!-- ===== SECCIÓN SOBRE MÍ ===== -->
+        <section id="about" class="about-section">
+
+            <!-- Contenedor general de la sección -->
+            <div class="container about__content">
+
+                <!-- ===== BLOQUE BIO / DESCRIPCIÓN PERSONAL ===== -->
+                <div class="about__bio">
+
+                    <h2 class="section-title">SOBRE MÍ</h2>
+                    <p>
+                        Artesano digital con base en España. Mi enfoque no es solo visual,
+                        sino estructural. Busco la intersección entre la
+                        <strong>funcionalidad cruda</strong>
+                        y la estética sofisticada.
+                    </p>
+                    <p>
+                        Construyo interfaces que tienen peso y ocupan un lugar definido en la pantalla,
+                        evitando lo efímero.
+                    </p>
+                </div>
+
+                <!-- ===== BLOQUE STACK / TECNOLOGÍAS ===== -->
+                <div class="about__stack">
+
+                    <!-- Lista de tecnologías y herramientas -->
+                    <ul class="stack-grid">
+
+                        <li class="stack-item">HTML5</li>
+                        <li class="stack-item">SCSS</li>
+                        <li class="stack-item">JAVASCRIPT</li>
+                        <li class="stack-item">BOOTSTRAP</li>
+                        <li class="stack-item">GIT</li>
+                        <li class="stack-item">VS CODE</li>
+                        <li class="stack-item">REACT</li>
+                        <li class="stack-item">PYTHON</li>
+                        <li class="stack-item">GEMINI</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <!-- ===== SECCIÓN DE PROYECTOS ===== -->
+        <section id="work" class="work-section">
+            <div class="container">
+
+                <div class="section-header">
+                    <h2>OBRAS SELECCIONADAS</h2>
+                    <p class="subtitle">( 2023 — 2026 )</p>
+                </div>
+
+                <!-- Grid tipo masonry para proyectos -->
+                <div class="masonry-grid" id="masonry-grid">
+
+                    <article class="project-card" data-id="1">
+                        <img src="assets/img/yoga.png" alt="Diseño Web Yoga Studio" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>Yoga Studio</h3>
+                            <p>Landing Page</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-id="2">
+                        <img src="assets/img/atelierdali.png" alt="E-commerce Taller Láser" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>Taller Láser</h3>
+                            <p>E-commerce</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-id="3">
+                        <img src="assets/img/sublime.png" alt="Branding Tienda Ropa" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>Tienda Ropa</h3>
+                            <p>Branding</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-id="4">
+                        <img src="assets/img/music.png" alt="App Música Concept" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>App Música</h3>
+                            <p>Mobile Concept</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-id="5">
+                        <img src="assets/img/tareas.png" alt="Web App Gestor Tareas" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>To-Do List</h3>
+                            <p>Web App</p>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-id="6">
+                        <img src="assets/img/cafe.png" alt="Branding Cafetería" class="project-card__image">
+                        <div class="project-card__info">
+                            <h3>Cafetería</h3>
+                            <p>Branding & UI</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== SECCIÓN FOOTER ===== -->
+
+    <footer id="contact" class="main-footer">
+        <div class="container footer__content">
+
+            <div class="footer__cta">
+                <h2 class="footer__title">¿HACEMOS <br> ALGO JUNTOS?</h2>
+                <a href="mailto:nico@ejemplo.com" class="btn btn--primary">
+                    Enviar Correo
+                </a>
+            </div>
+
+            <div class="footer__bottom">
+                <div class="copyright">
+                    <p>&copy; 2026 Nicolás Maroni.</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" target="_blank" class="social-link">LINKEDIN</a>
+                    <a href="#" target="_blank" class="social-link">GITHUB</a>
+                    <a href="#" target="_blank" class="social-link">INSTAGRAM</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- ===== SECCIÓN DE MODALS ===== -->
+
+    <div id="project-modal" class="modal">
+        <div class="modal__content">
+            <span class="modal__close">&times;</span>
+
+            <div class="modal__image-container">
+                <img src="" alt="" id="modal-image">
+            </div>
+
+            <div class="modal__info">
+                <h2 id="modal-title">TITULO PROYECTO</h2>
+                <p id="modal-description">Descripción del proyecto...</p>
+                <div id="modal-tags" class="modal__tags">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Archivo JavaScript principal -->
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

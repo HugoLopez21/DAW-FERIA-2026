@@ -1,0 +1,45 @@
+// scss/components/_buttons.scss
+
+.btn {
+    display: inline-flex; // Para que el icono y texto se alineen bien
+    align-items: center; // Centrado vertical
+    gap: 0.5rem; // Espacio entre texto e icono
+    padding: 1rem 2rem; // Tamaño del botón
+    font-family: $font-display; 
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease; 
+
+    // FÍSICA DEL BOTÓN (Bordes y Sombras)
+    border: 2px solid $color-ink;
+    box-shadow: $shadow-std; 
+
+    
+    &:hover {
+        transform: translate(3px, 3px); 
+        box-shadow: $shadow-hover; 
+    }
+
+    // VARIANTE PRIMARIA (Negro con texto claro)
+    &--primary {
+        background-color: $color-ink;
+        color: $color-canvas;
+
+        &:hover {
+            background-color: $color-accent; // Se vuelve Terracota al tocarlo
+            border-color: $color-accent;
+        }
+    }
+
+    // VARIANTE SECUNDARIA (Transparente con texto negro)
+    &--secondary {
+        background-color: transparent;
+        color: $color-ink;
+
+        &:hover {
+            background-color: $color-white;
+        }
+    }
+}
